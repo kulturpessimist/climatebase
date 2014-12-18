@@ -26,19 +26,6 @@ h1, h2, h3, h4, h5{
 	background-repeat: no-repeat;
 	background-size: 120px;
 }
-#details{
-	width: 100%;
-	min-height: 300px;
-	background-color: #fff;
-	margin-top: -6px;
-}
-#details.hidden{
-	width: 100%;
-	height: 0px;
-	min-height: 0px;
-	background-color: #fff;
-	margin-top: -6px;
-}
 
 .message{
 	width: 800px;
@@ -68,13 +55,13 @@ h1, h2, h3, h4, h5{
 .search{
 	margin-top: 200px;
 }
-.search h3{
+.search>h3{
 	text-align: center;
 	color: white;
 	font-weight: 400;
 	margin-bottom: 20px;
 }
-.search h3 span{
+.search>h3 span{
 	font-weight: 700;
 }
 .jumbotron input, .form-group, .input-group{
@@ -95,3 +82,52 @@ footer{
 footer span{
 	font-weight: 700;
 }
+/*
+ * 
+ * */
+#details h1, #details h2, #details h3, #details h4, #details h5{
+	margin: 0px;
+}
+.label{
+	position:relative;
+	top:4px;
+}
+#details .row{
+	margin-top: 20px;
+	opacity: 0;
+	
+	-webkit-transition: opacity 1s ease-in-out;
+	transition: opacity 1s ease-in-out;
+}
+#details{
+	width: 100%;
+	height: 0px;
+	background-color: #fff;
+	margin-top: -6px;
+	
+	-webkit-transition: height 1s ease-in-out;
+	transition: height 1s ease-in-out;
+}
+#details.hidden{
+	height: 0px;
+}
+
+#details.results{
+	height: 400px;
+}
+#details.results .row{
+	display: block;
+	opacity: 1;
+}
+
+.search{
+	margin-top: 200px;
+
+	-webkit-transition: margin-top 1s ease-in-out;
+	transition: margin-top 1s ease-in-out;
+}
+
+.search.action{
+	margin-top: 0px;
+}
+

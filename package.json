@@ -1,5 +1,5 @@
 {
-  "name": "climatebase",
+  "name": "climatebase-app",
   "description": "open, transparent and sustainable db for carbon credits",
   "version": "1.0.0",
   "devDependencies": {
