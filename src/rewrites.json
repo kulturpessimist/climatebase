@@ -1,0 +1,35 @@
+[
+	{
+		"from":		"",
+		"to":		"index.html"
+	},
+	{
+		"from":		"css/*",
+		"to":		"css/*"
+	},
+	{
+		"from":		"img/*",
+		"to":		"img/*"
+	},
+	{
+		"from":		"js/*",
+		"to":		"js/*"
+	},
+
+	{
+		"from":		"favicon.ico",
+		"to":		"img/favicon.ico"
+	},
+	{
+		"from":		"font/*",
+		"to":		"font/*"
+	},
+	{
+		"from":		"fonts/*",
+		"to":		"font/*"
+	},
+	{
+		"from":		"/*",
+		"to":		"/*"
+	}
+]
