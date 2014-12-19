@@ -21,12 +21,8 @@
 		"to":		"img/favicon.ico"
 	},
 	{
-		"from":		"font/*",
-		"to":		"font/*"
-	},
-	{
 		"from":		"fonts/*",
-		"to":		"font/*"
+		"to":		"fonts/*"
 	},
 	{
 		"from":		"/*",
