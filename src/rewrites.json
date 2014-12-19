@@ -24,7 +24,37 @@
 		"from":		"fonts/*",
 		"to":		"fonts/*"
 	},
+
 	{
+		"from":		"api/search/:id",
+		"to":		"_view/search",
+		"query":		{
+			"key": ":id",
+			"include_docs": "true"
+		}
+	},
+	{
+		"from":		"api/last",
+		"to":		"_view/last",
+		"query":		{
+			"limit": "10",
+			"include_docs": "true"
+		}
+	},
+	{
+		"from":		"api/last/:max",
+		"to":		"_view/last",
+		"query":		{
+			"limit": ":max",
+			"include_docs": "true"
+		}
+	},
+	{
+		"from":		"api/*",
+		"to":		"_view/*"
+	},
+	{
+		"_comment": "MUST BE THE LAST ROUTE! EVER!",
 		"from":		"/*",
 		"to":		"/*"
 	}
