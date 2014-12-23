@@ -20,9 +20,7 @@
 <body>
 
 	<div class="jumbotron emotion">
-		<div class="branding">
-			&nbsp;<!--<img src="img/logo.inverse.svg" height="60" />-->
-		</div>
+		<div class="branding">&nbsp;</div>
 		<div class="container">
 			<div class="row">
 				<div class="search col-md-6 col-md-offset-3">
@@ -50,18 +48,18 @@
 							 </div>
 						</div>
 						<br/>
-						<div class="row">
+						<div class="row lighter">
 							<div class="col-md-6 llabel-quantity"><h3><span data-bind="quantity"></span> t</h3></div>
 						  	<div class="col-md-6 llabel-vintage"><h3><small data-bind="vintage"></small></h3></div>
 						</div>
 						<div class="row">
-							<div class="col-md-4" data-bind="humanDate"></div>
+							<div class="col-md-4 llabel-date" data-bind="humanDate"></div>
 							<div data-bind="links">
 								<div class="col-md-4 llabel-markit" data-bind="markit"></div>
 							  	<div class="col-md-4 llabel-natureoffice" data-bind="natureoffice"></div>
 							</div>
 						</div>
-						<div class="row" data-bind="customer" id="customer">
+						<div class="row lighter" data-bind="customer" id="customer">
 							<div class="col-md-6 llabel-cname" data-bind="name"></div>
 						  	<div class="col-md-6 llabel-cusecase" data-bind="usecase"></div>
 						</div>
@@ -96,6 +94,7 @@
 	</footer>
 
 	<script src="js/jquery-1.11.2.min.js"></script>
+	<script src="_utils/script/jquery.couch.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/transparency.min.js"></script>
 	<script src="js/climatebase.js"></script>
