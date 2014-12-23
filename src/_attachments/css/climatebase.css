@@ -136,3 +136,96 @@ footer span{
 	margin-top: 0px;
 }
 
+/**/
+#details div.col-md-12,
+#details div.col-md-6,
+#details div.col-md-4,
+#details div.col-md-3{
+	padding-top: 30px;
+}
+.llabel-name:after{
+	content:"Name"; 
+	text-transform:upper-case; font-size:0.8em; background-color:#f2ede5; color:#424242;
+	padding-left:6px; padding-top:4px; padding-right:4px; padding-bottom:4px;
+	border-bottom-right-radius: 6px; position:absolute; top:0px; left:0px;
+}
+
+.llabel-id:after{
+	content:"ID"; 
+	text-transform:upper-case; font-size:0.8em; background-color:#f2ede5; color:#424242;
+	padding-left:6px; padding-top:4px; padding-right:4px; padding-bottom:4px;
+	border-bottom-right-radius: 6px; position:absolute; top:0px; left:0px;
+}
+
+.llabel-standard:after{
+	content:"Standard"; 
+	text-transform:upper-case; font-size:0.8em; background-color:#f2ede5; color:#424242;
+	padding-left:6px; padding-top:4px; padding-right:4px; padding-bottom:4px;
+	border-bottom-right-radius: 6px; position:absolute; top:0px; left:0px;
+}
+
+.llabel-quantity:after{
+	content:"Quantity"; 
+	text-transform:upper-case; font-size:0.8em; background-color:#f2ede5; color:#424242;
+	padding-left:6px; padding-top:4px; padding-right:4px; padding-bottom:4px;
+	border-bottom-right-radius: 6px; position:absolute; top:0px; left:0px;
+}
+
+.llabel-vintage:after{
+	content:"Vintage"; 
+	text-transform:upper-case; font-size:0.8em; background-color:#f2ede5; color:#424242;
+	padding-left:6px; padding-top:4px; padding-right:4px; padding-bottom:4px;
+	border-bottom-right-radius: 6px; position:absolute; top:0px; left:0px;
+}
+
+.llabel-date:after{
+	content:"Date"; 
+	text-transform:upper-case; font-size:0.8em; background-color:#f2ede5; color:#424242;
+	padding-left:6px; padding-top:4px; padding-right:4px; padding-bottom:4px;
+	border-bottom-right-radius: 6px; position:absolute; top:0px; left:0px;
+}
+
+.llabel-markit:after{
+	content:"MarkIt"; 
+	text-transform:upper-case; font-size:0.8em; background-color:#f2ede5; color:#424242;
+	padding-left:6px; padding-top:4px; padding-right:4px; padding-bottom:4px;
+	border-bottom-right-radius: 6px; position:absolute; top:0px; left:0px;
+}
+
+.llabel-natureoffice:after{
+	content:"natureOffice"; 
+	text-transform:upper-case; font-size:0.8em; background-color:#f2ede5; color:#424242;
+	padding-left:6px; padding-top:4px; padding-right:4px; padding-bottom:4px;
+	border-bottom-right-radius: 6px; position:absolute; top:0px; left:0px;
+}
+
+.llabel-cname:after{
+	content:"Customer"; 
+	text-transform:upper-case; font-size:0.8em; background-color:#f2ede5; color:#424242;
+	padding-left:6px; padding-top:4px; padding-right:4px; padding-bottom:4px;
+	border-bottom-right-radius: 6px; position:absolute; top:0px; left:0px;
+}
+
+.llabel-cusecase:after{
+	content:"Use Case"; 
+	text-transform:upper-case; font-size:0.8em; background-color:#f2ede5; color:#424242;
+	padding-left:6px; padding-top:4px; padding-right:4px; padding-bottom:4px;
+	border-bottom-right-radius: 6px; position:absolute; top:0px; left:0px;
+}
+
+.llabel-note:after{
+	content:"Additional Notes"; 
+	text-transform:upper-case; font-size:0.8em; background-color:#f2ede5; color:#424242;
+	padding-left:6px; padding-top:4px; padding-right:4px; padding-bottom:4px;
+	border-bottom-right-radius: 6px; position:absolute; top:0px; left:0px;
+}
+
+/*
+#details div.col-md-6:after,
+#details div.col-md-3:after{
+	content:"Label"; 
+	text-transform:upper-case; font-size:0.8em; background-color:#f2ede5; color:#424242;
+	padding-left:6px; padding-top:4px; padding-right:4px; padding-bottom:4px;
+	border-bottom-right-radius: 6px; position:absolute; top:0px; left:0px;
+}
+*/

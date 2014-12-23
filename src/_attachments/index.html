@@ -30,7 +30,7 @@
 					<form class="form-inline" role="form">
 						<div class="form-group">
 							<div class="input-group">
-						  		<input type="search" class="form-control" id="" placeholder="Certification number">
+						  		<input type="search" class="form-control" id="searchfield" placeholder="Certification number">
 						  		<div class="input-group-addon" id="start-search">
 						  			<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
 						  		</div>
@@ -38,33 +38,35 @@
 					  	</div>
 					</form>
 					<div class="details container-fluid" id="details">
-						<div class="row">
-							<div class="col-md-6">
-								<h3>cop name (with link)</h3>
+						<div class="row" data-bind="offset-project">
+							<div class="col-md-6 llabel-name">
+								<h3 data-bind="name"></h3>
 							</div>
-						  	<div class="col-md-3 text-uppercase">
-							  	<h3><small>cop id</small></h3>
+						  	<div class="col-md-3 llabel-id">
+							  	<h3><small class="text-uppercase" data-bind="id"></small></h3>
 							</div>
-						  	<div class="col-md-3 text-uppercase">
-							  	<span class="label label-success">cop std.</span>
+						  	<div class="col-md-3 llabel-standard">
+							  	<span class="label label-success text-uppercase" data-bind="standard"></span>
 							 </div>
 						</div>
 						<br/>
 						<div class="row">
-							<div class="col-md-6"><h3>lot</h3></div>
-						  	<div class="col-md-6"><h3><small>vintage</small></h3></div>
+							<div class="col-md-6 llabel-quantity"><h3><span data-bind="quantity"></span> t</h3></div>
+						  	<div class="col-md-6 llabel-vintage"><h3><small data-bind="vintage"></small></h3></div>
 						</div>
 						<div class="row">
-							<div class="col-md-4">Date</div>
-							<div class="col-md-4">markit</div>
-						  	<div class="col-md-4">noid</div>
+							<div class="col-md-4" data-bind="humanDate"></div>
+							<div data-bind="links">
+								<div class="col-md-4 llabel-markit" data-bind="markit"></div>
+							  	<div class="col-md-4 llabel-natureoffice" data-bind="natureoffice"></div>
+							</div>
+						</div>
+						<div class="row" data-bind="customer" id="customer">
+							<div class="col-md-6 llabel-cname" data-bind="name"></div>
+						  	<div class="col-md-6 llabel-cusecase" data-bind="usecase"></div>
 						</div>
 						<div class="row">
-							<div class="col-md-6">buyer</div>
-						  	<div class="col-md-6">reason</div>
-						</div>
-						<div class="row">
-							<div class="col-md-12">note</div>
+							<div class="col-md-12 llabel-note" data-bind="note"></div>
 						</div>
 					</div>
 	 			</div>
@@ -93,8 +95,9 @@
 		<p>&copy; climate<span>base</span>.io 2014 | <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#104;&#101;&#108;&#108;&#111;&#064;&#099;&#108;&#105;&#109;&#097;&#116;&#101;&#098;&#097;&#115;&#101;&#046;&#105;&#111;">Contact</a> | <a id="login-button" href="#">Login</a></p>
 	</footer>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="js/jquery-1.11.2.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
+	<script src="js/transparency.min.js"></script>
 	<script src="js/climatebase.js"></script>
 </body>
 </html>

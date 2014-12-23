@@ -12,6 +12,10 @@
 		"to":		"img/*"
 	},
 	{
+		"from":		"js/jquery.couch.js",
+		"to":		"_utils/script/jquery.couch.js"
+	},
+	{
 		"from":		"js/*",
 		"to":		"js/*"
 	},
