@@ -1,5 +1,11 @@
 @import url('animate.css');
 
+::selection {
+	background: #4CAF50;
+}
+::-moz-selection {
+	background: #4CAF50;
+}
 body{
 	font-family: 'Source Sans Pro', sans-serif;
 	font-weight: 300;
@@ -12,16 +18,63 @@ a{
 	color: #999;
 	font-weight: 600;
 }
+.modal-body form{
+	margin-bottom: 20px;
+}
+
+.addEntry{
+	cursor: pointer;
+	position: absolute;
+	right: 20px;
+	top:580px;
+	color: white;
+	
+	font-size: 2.4em;
+	font-weight: 400;
+}
+h2 .glyphicon-plus-sign{
+	position:relative; top:8px;
+}
+
 .jumbotron{
 	padding-top: 0px;
 }
 .emotion{
 	height: 660px;
-	background-image: url('../img/backgrounds/forest-grass.jpg');
 	background-position: center bottom;
 	background-repeat: no-repeat;
 	background-size: cover;
 }
+	.emotion.picture1{
+		background-image: url('../img/backgrounds/forest-sky.jpg');
+	}
+	.emotion.picture2{
+		background-image: url('../img/backgrounds/forest-grass.jpg');
+	}
+	.emotion.picture3{
+		background-image: url('../img/backgrounds/evening.jpg');
+	}
+	.emotion.picture4{
+		background-image: url('../img/backgrounds/grass.jpg');
+	}
+	.emotion.picture5{
+		background-image: url('../img/backgrounds/green-forest.jpg');
+	}
+	.emotion.picture6{
+		background-image: url('../img/backgrounds/grass-green.jpg');
+	}
+	.emotion.picture7{
+		background-image: url('../img/backgrounds/lens-flare.jpg');
+	}
+	.emotion.picture8{
+		background-image: url('../img/backgrounds/light-forest.jpg');
+	}
+	.emotion.picture9{
+		background-image: url('../img/backgrounds/river.jpg');
+	}
+
+
+
 .branding{
 	height: 90px;
 	padding: 20px;
@@ -137,7 +190,9 @@ footer span{
 .search.action{
 	margin-top: 0px;
 }
-
+#hello{
+	cursor: pointer;
+}
 /**/
 #details div.col-md-12,
 #details div.col-md-6,

@@ -12,17 +12,12 @@
 		"to":		"img/*"
 	},
 	{
-		"from":		"js/jquery.couch.js",
-		"to":		"_utils/script/jquery.couch.js"
+		"from":		"favicon.ico",
+		"to":		"img/favicon.ico"
 	},
 	{
 		"from":		"js/*",
 		"to":		"js/*"
-	},
-
-	{
-		"from":		"favicon.ico",
-		"to":		"img/favicon.ico"
 	},
 	{
 		"from":		"fonts/*",
@@ -55,7 +50,8 @@
 	},
 	{
 		"from":		"api/*",
-		"to":		"_view/*"
+		"to":		"../../*",
+		"method":	"PUT"
 	},
 	{
 		"_comment": "MUST BE THE LAST ROUTE! EVER!",

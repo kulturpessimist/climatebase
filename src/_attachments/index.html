@@ -71,6 +71,11 @@
 	 		</div>
 	 	</div>
 	</div>
+	
+	<h2 class="addEntry" data-toggle="modal" data-target="#addModal">
+		Add a new entry <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
+	</h2>
+
 
 	<div class="message">
 		<div class="third">
@@ -87,14 +92,163 @@
 		</div>
 		<div class="clearfix"></div>
 	</div>
+	
+	<!-- Login -->
+	<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="login" aria-hidden="true">
+  		<div class="modal-dialog modal-sm">
+			<div class="modal-content">
+		  		<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title">Login</h4>
+		  		</div>
+				<div class="modal-body">
+					<form>
+						<input type="text" value="" placeholder="Username" class="form-control" id="dbUser"/><br/>
+						<input type="password" value="" placeholder="Password" class="form-control" id="dbPassword"/>
+					</form>
+					<p class="alert alert-danger hide" role="alert">Wrong Username or Password. Please try again.</p>
+		  		</div>
+		  		<div class="modal-footer">
+					<button type="button" class="btn btn-link" data-dismiss="modal">Cancel</button>
+					<button type="button" id="loginButton" class="btn btn-success">Login</button>
+		  		</div>
+			</div>
+		</div>
+	</div>
+	<!-- Login -->
+	<div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="add" aria-hidden="true" data-backdrop="false">
+	  	<div class="modal-dialog">
+			<div class="modal-content">
+			  	<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title">Add new project to climatebase</h4>
+			  	</div>
+				<div class="modal-body">					
+					<form class="form-horizontal" id="addForm">
+					  	<div class="form-group">
+							<label for="add_id" class="col-sm-2 control-label">ID</label>
+							<div class="col-sm-10">
+						  		<input type="text" class="form-control input-sm" id="add_id" placeholder="ID" disabled="disabled">
+							</div>
+					  	</div>
+					  	<div class="form-group">
+					  		<label for="add_quantity" class="col-sm-2 control-label">Quantity</label>
+					  		<div class="col-sm-10">
+					  		  	<input type="number" class="form-control input-sm" id="add_quantity" placeholder="Quantity" 
+					  		  		data-validation="required" data-validation-error-msg="Property must be not empty">
+					  		</div>
+					  	</div>
+					  	<div class="form-group">
+					  		<label for="add_vintage" class="col-sm-2 control-label">Vintage</label>
+					  		<div class="col-sm-10">
+					  		  	<input type="number" min="2013" class="form-control input-sm" id="add_vintage" placeholder="Vintage" 
+					  		  		data-validation="required" data-validation-error-msg="Property must be not empty">
+					  		</div>
+					  	</div>
+					  	<div class="form-group">
+					  		<label for="add_date" class="col-sm-2 control-label">Date</label>
+					  		<div class="col-sm-10">
+					  		  	<input type="text" class="form-control input-sm" id="add_date" placeholder="Date" 
+					  		  		data-validation="date" data-validation-help="yyyy-mm-dd" data-validation-error-msg="Property must be not empty">
+					  		</div>
+					  	</div>
+					  	<div class="form-group">
+					  		<label for="add_note" class="col-sm-2 control-label">Note</label>
+					  		<div class="col-sm-10">
+					  			<textarea class="form-control input-sm" rows="3" id="add_note"></textarea>
+					  		</div>
+					  	</div>
+					  	<h4>Offset Project</h4>
+					  	<div class="form-group">
+					  		<label for="add_name" class="col-sm-2 control-label">Name</label>
+					  		<div class="col-sm-10">
+					  		  	<input type="text" class="form-control input-sm" id="add_name" placeholder="Name" 
+					  		  		data-validation="required" data-validation-error-msg="Property must be not empty">
+					  		</div>
+					  	</div>
+					  	<div class="form-group">
+					  		<label for="add_opid" class="col-sm-2 control-label">ID</label>
+					  		<div class="col-sm-10">
+					  		  	<input type="text" class="form-control input-sm" id="add_opid" placeholder="ID" 
+					  		  		data-validation="required" data-validation-error-msg="Property must be not empty">
+					  		</div>
+					  	</div>
+					  	<div class="form-group">
+					  		<label for="add_standard" class="col-sm-2 control-label">Standard</label>
+					  		<div class="col-sm-10">
+					  		  	<input type="text" class="form-control input-sm" id="add_standard" placeholder="Standard" 
+					  		  		data-validation="required" data-validation-error-msg="Property must be not empty">
+					  		</div>
+					  	</div>
+					  	<div class="form-group">
+					  		<label for="add_url" class="col-sm-2 control-label">Link</label>
+					  		<div class="col-sm-10">
+					  		  	<input type="text" class="form-control input-sm" id="add_url" placeholder="Link" 
+					  		  		data-validation="required" data-validation-error-msg="Property must be not empty">
+					  		</div>
+					  	</div>
+						<h4>Customer</h4>
+					  	<div class="form-group">
+							<div class="col-sm-offset-2 col-sm-10">
+						  		<div class="checkbox">
+									<label>
+										<input type="checkbox" id="add_hidden"> Hidden?
+									</label>
+						  		</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="add_cname" class="col-sm-2 control-label">Name</label>
+							<div class="col-sm-10">
+							  	<input type="text" class="form-control input-sm" id="add_cname" placeholder="Name">
+							</div>
+						</div>
+						<div class="form-group">
+						  	<label for="add_usecase" class="col-sm-2 control-label">Use case</label>
+						  	<div class="col-sm-10">
+						  		<input type="text" class="form-control input-sm" id="add_usecase" placeholder="Use case">
+						  	</div>
+						</div>
+						<h4>Links</h4>
+						<div class="form-group">
+							<label for="add_markit" class="col-sm-2 control-label">Markit</label>
+							<div class="col-sm-10">
+							  	<input type="text" class="form-control input-sm" id="add_markit" placeholder="MarkIt">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="add_natureoffice" class="col-sm-2 control-label">natureOffice</label>
+							<div class="col-sm-10">
+							  	<input type="text" class="form-control input-sm" id="add_natureoffice" placeholder="natureOffice">
+							</div>
+						</div>
+					</form>
+			  	</div>
+			  	<div class="modal-footer">
+					<button type="button" class="btn btn-link" data-dismiss="modal">Cancel</button>
+					<button type="button" id="addButton" class="btn btn-success">Save</button>
+			  	</div>
+			</div>
+		</div>
+	</div>
 
 	<footer>
 		<hr>
-		<p>&copy; climate<span>base</span>.io 2014 | <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#104;&#101;&#108;&#108;&#111;&#064;&#099;&#108;&#105;&#109;&#097;&#116;&#101;&#098;&#097;&#115;&#101;&#046;&#105;&#111;">Contact</a> | <a id="login-button" href="#">Login</a></p>
+		<p>
+			&copy; climate<span>base</span>.io 2014 | 
+			<a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#104;&#101;&#108;&#108;&#111;&#064;&#099;&#108;&#105;&#109;&#097;&#116;&#101;&#098;&#097;&#115;&#101;&#046;&#105;&#111;">Contact</a> | 
+			<a id="login-button" href="#" data-toggle="modal" data-target="#loginModal">Login</a>
+			<span id="hello"></span>
+		</p>
 	</footer>
 
 	<script src="js/jquery-1.11.2.min.js"></script>
-	<script src="_utils/script/jquery.couch.js"></script>
+	<script src="js/jquery.couch.js"></script>
+	<script src="js/jquery.form-validator.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/transparency.min.js"></script>
 	<script src="js/climatebase.js"></script>
