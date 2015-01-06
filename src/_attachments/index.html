@@ -36,37 +36,87 @@
 					  	</div>
 					</form>
 					<div class="details container-fluid" id="details">
-						<div class="row" data-bind="offset-project">
-							<div class="col-md-6 llabel-name">
-								<h3 data-bind="name"></h3>
-							</div>
-						  	<div class="col-md-3 llabel-id">
-							  	<h3><small class="text-uppercase" data-bind="id"></small></h3>
-							</div>
-						  	<div class="col-md-3 llabel-standard">
-							  	<span class="label label-success text-uppercase" data-bind="standard"></span>
-							 </div>
-						</div>
-						<br/>
-						<div class="row lighter">
-							<div class="col-md-6 llabel-quantity"><h3><span data-bind="quantity"></span> t</h3></div>
-						  	<div class="col-md-6 llabel-vintage"><h3><small data-bind="vintage"></small></h3></div>
-						</div>
-						<div class="row">
-							<div class="col-md-4 llabel-date" data-bind="humanDate"></div>
-							<div data-bind="links">
-								<div class="col-md-4 llabel-markit" data-bind="markit"></div>
-							  	<div class="col-md-4 llabel-natureoffice" data-bind="natureoffice"></div>
-							</div>
-						</div>
-						<div class="row lighter" data-bind="customer" id="customer">
-							<div class="col-md-6 llabel-cname" data-bind="name"></div>
-						  	<div class="col-md-6 llabel-cusecase" data-bind="usecase"></div>
-						</div>
-						<div class="row">
-							<div class="col-md-12 llabel-note" data-bind="note"></div>
-						</div>
+						<table class="table table-condensed">
+							<tr>
+								<td>climatebase ID</td>
+								<td data-bind="_id">&nbsp;</td>
+							</tr>
+							<tr>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+							</tr>
+							<tr data-bind="offset-project">
+								<td>Project</td>
+								<td data-bind="name">&nbsp;</td>
+							</tr>
+							<tr data-bind="offset-project">
+								<td>Project ID</td>
+								<td data-bind="id">&nbsp;</td>
+							</tr>
+							<tr data-bind="offset-project">
+								<td>Standard</td>
+								<td data-bind="standard">&nbsp;</td>
+							</tr>
+							<tr>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+							</tr>
+							<tr>
+								<td>Quantity in t</td>
+								<td data-bind="quantity">&nbsp;</td>
+							</tr>
+							<tr>
+								<td>Vintage</td>
+								<td data-bind="vintage">&nbsp;</td>
+							</tr>
+							<tr>
+								<td>&nbsp;</td>
+								<td>&nbsp;</td>
+							</tr>
+							<tr data-bind="links">
+								<td>Markit ID</td>
+								<td data-bind="markit">&nbsp;</td>
+							</tr>
+							<tr data-bind="links">
+								<td>natureOffice ID</td>
+								<td data-bind="natureoffice">&nbsp;</td>
+							</tr>
+							<tr>
+								<td>Date of decommissioning</td>
+								<td data-bind="humanDate">&nbsp;</td>
+							</tr>
+							<tr data-bind="customer">
+								<td>Customer</td>
+								<td data-bind="name">&nbsp;</td>
+							</tr>
+							<tr data-bind="customer">
+								<td>Use case</td>
+								<td data-bind="usecase">&nbsp;</td>
+							</tr>
+							<tr>
+								<td>Additional notes:</td>
+								<td data-bind="note">&nbsp;</td>
+							</tr>
+						</table>
 					</div>
+	 			
+	 				<div class="last-entries container">
+		 				<h2>Latest Entries</h2>
+		 				<div class="row" id="latest-entries">
+		 				 	<div class="col-md-3" data-bind="doc">
+			 				 	<a data-bind="deeplink">
+			 				 		<span class="label label-default" data-bind="latestDate"></span>
+			 				 		<p>
+			 				 			#<span data-bind="_id"></span><br/>
+			 				 			<strong data-bind="quantity"></strong><strong>t</strong><br/>
+			 				 			<span data-bind="offset-project">
+				 					 		<span data-bind="name"></span>
+				 					 	</span>
+		 				 			</p>
+		 				 		</a>
+		 				 	</div>
+		 				</div>
+		 			</div>
 	 			</div>
 	 		</div>
 	 	</div>

@@ -4,7 +4,17 @@ var climatebase = climatebase || {
 			text: function(params){
 				return new Date(this.date).toLocaleDateString();
 			}
-		}	
+		},
+		latestDate: {
+			text: function(params){
+				return new Date(this.doc.date).toLocaleDateString();
+			}
+		},
+		deeplink: {
+			href: function(params){
+				return "javascript:climatebase.seek('"+(this.doc._id)+"');";
+			}
+		}
 	},
 	schema: {
 		"type": "decommissioning",
@@ -20,6 +30,11 @@ var climatebase = climatebase || {
 	  	}
 	},
 	seek: function(){
+		var prefil = arguments[0] || "";
+		if(prefil!==""){
+			$('#searchfield').val(prefil);
+		}
+
 		if($('#details').hasClass('results')){
 			climatebase.reset();
 		}else{
@@ -28,7 +43,7 @@ var climatebase = climatebase || {
 					.done(function( data ) {
 				  		//console.log( "Data Loaded: ", data );
 						if(data.rows.length>0){
-							console.log('found ->', data.rows[0]);
+							//console.log('found ->', data.rows[0]);
 							$('#start-search span').removeClass('glyphicon-search');
 							$('#start-search span').addClass('glyphicon-refresh');
 							// we found the thing
@@ -55,12 +70,26 @@ var climatebase = climatebase || {
 			$('#start-search span').removeClass('glyphicon-refresh');
 			$('#start-search span').addClass('glyphicon-remove');
 		}, 1000);
+		$('.last-entries').css('opacity','0');
 	},
 	nope: function(){
 		$('form').addClass('shake animated')
 			.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
 				$(this).removeClass('shake animated');
 			});	
+	},
+	/**/
+	latest: function(){
+		$.getJSON( "/api/last/8")
+			.done(function( data ) {
+		  		console.log( "Data Loaded: ", data );
+				if(data.rows.length>0){
+					//console.log('latest ->', data.rows);
+					// we found the thing
+					$('#latest-entries').render(data.rows, climatebase.directives);
+					$('.last-entries').css('opacity','1');
+				}
+			});
 	},
 	/**/	
 	reset: function(){
@@ -72,6 +101,7 @@ var climatebase = climatebase || {
 			$('#start-search span').removeClass('glyphicon-remove');
 			$('#start-search span').addClass('glyphicon-search');
 		}, 1000);
+		$('.last-entries').css('opacity','1');
 	},
 	prepopulate: function(){
 		var today = new Date();
@@ -182,15 +212,16 @@ var climatebase = climatebase || {
 			form:$('#addForm'),
 			validateOnBlur: true,
 			onError : function() {
-				console.log('Sorry, but no!');
+				//console.log('Sorry, but no!');
 				return false;
 			},
 			onSuccess : function() {
-				console.log('The form is valid!');
+				//console.log('The form is valid!');
 				climatebase.saveDoc();
 				return false;
 			}
 		});
+		climatebase.latest();
 
 		climatebase.session();
 	}

@@ -45,7 +45,8 @@
 		"to":		"_view/last",
 		"query":		{
 			"limit": ":max",
-			"include_docs": "true"
+			"include_docs": "true",
+			"descending": "true"
 		}
 	},
 	{

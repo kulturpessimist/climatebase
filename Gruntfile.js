@@ -9,10 +9,14 @@ module.exports = function(grunt) {
 				options: {
 					port: 9001,
 					base: 'src/_attachments',
-					keepalive:true
-				}
+					keepalive:true,
+					//livereload: 35728,
+					open: 'http://127.0.0.1:9001'
+
+				}		
 			 }
 		},
+		
 		'couch-compile': {
 			website: {
 				files: {
