@@ -30,24 +30,21 @@ var climatebase = climatebase || {
 	  	}
 	},
 	seek: function(){
-		var prefil = arguments[0] || "";
-		if(prefil!==""){
-			$('#searchfield').val(prefil);
+		if(typeof(arguments[0])!=="undefined" && typeof(arguments[0])==="string"){
+			$('#searchfield').val(arguments[0]);
 		}
-
+		
 		if($('#details').hasClass('results')){
 			climatebase.reset();
 		}else{
 			if( $('#searchfield').val()!=="" ){
 				$.getJSON( "/api/search/"+$('#searchfield').val())
 					.done(function( data ) {
-				  		//console.log( "Data Loaded: ", data );
 						if(data.rows.length>0){
-							//console.log('found ->', data.rows[0]);
 							$('#start-search span').removeClass('glyphicon-search');
 							$('#start-search span').addClass('glyphicon-refresh');
 							// we found the thing
-							climatebase.fadeInTable(data.rows[0].doc);
+							climatebase.fadeInTable(data.rows[0].value);
 						}else{
 							climatebase.nope();
 						}

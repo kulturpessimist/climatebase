@@ -29,7 +29,7 @@
 		"to":		"_view/search",
 		"query":		{
 			"key": ":id",
-			"include_docs": "true"
+			"include_docs": "false"
 		}
 	},
 	{
