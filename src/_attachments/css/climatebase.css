@@ -149,6 +149,12 @@ h2 .glyphicon-plus-sign{
 	margin-bottom: 10px;
 }
 
+.last-entries .col-xs-2,
+.last-entries .col-xs-3,
+
+.last-entries .col-sm-2,
+.last-entries .col-sm-3,
+
 .last-entries .col-md-2,
 .last-entries .col-md-3{
 	text-align: right;
@@ -193,6 +199,49 @@ h2 .glyphicon-plus-sign{
 	color: #333;
 }
 
+@media only screen and (max-device-width: 480px), only screen and (min-device-width: 560px) and (max-device-width: 1136px) and (-webkit-min-device-pixel-ratio: 2) {
+	/* iPhone only */
+	.message{
+		width: 100%;
+		margin: auto;
+	}
+	.third{
+		width: 80%;
+		margin: 10%;
+		clear: both;
+		float: none;
+	}
+	
+	.last-entries .col-xs-2,
+	.last-entries .col-xs-3,
+	
+	.last-entries .col-sm-2,
+	.last-entries .col-sm-3,
+	
+	.last-entries .col-md-2,
+	.last-entries .col-md-3{
+		text-align: right;
+		padding: 10px;
+		line-height: 1.3em;
+		width: 30%;
+	}
+	
+	#latest-entries div:nth-child(n+7){
+		display: none;
+	}
+	.last-entries p{
+		font-size: 0.7em;
+	}
+	.last-entries strong{
+		font-size: 1.3em;
+	}
+	footer{
+		width: 90%;
+		padding: 5%;
+		font-size: 0.7em;
+	}
+}
+
 .jumbotron input, .form-group, .input-group{
 	width: 100% !important;
 }
@@ -212,7 +261,7 @@ footer span{
 	font-weight: 700;
 }
 /*
- * 
+ *
  * */
 #details h1, #details h2, #details h3, #details h4, #details h5{
 	margin: 0px;
@@ -276,7 +325,7 @@ footer span{
 
 tr[data-bind="links"]
 {
-	display: none;	
+	display: none;
 }
 /**/
 /*
@@ -303,36 +352,36 @@ tr[data-bind="links"]
 }
 
 .llabel-name:after{
-	content:"Name"; 
+	content:"Name";
 }
 .llabel-id:after{
-	content:"ID"; 
+	content:"ID";
 }
 .llabel-standard:after{
-	content:"Standard"; 
+	content:"Standard";
 }
 .llabel-quantity:after{
-	content:"Quantity"; 
+	content:"Quantity";
 }
 .llabel-vintage:after{
-	content:"Vintage"; 
+	content:"Vintage";
 }
 .llabel-date:after{
-	content:"Date"; 
+	content:"Date";
 }
 .llabel-markit:after{
-	content:"MarkIt"; 
+	content:"MarkIt";
 }
 .llabel-natureoffice:after{
-	content:"natureOffice"; 
+	content:"natureOffice";
 }
 .llabel-cname:after{
-	content:"Customer"; 
+	content:"Customer";
 }
 .llabel-cusecase:after{
-	content:"Use Case"; 
+	content:"Use Case";
 }
 .llabel-note:after{
-	content:"Additional Notes"; 
+	content:"Additional Notes";
 }
 */
